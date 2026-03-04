@@ -1,8 +1,11 @@
 # FAQ Help
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Node.js Version](https://img.shields.io/node/v/faq-help)
-![Version](https://img.shields.io/badge/version-0.2.0-blue)
+[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/DavitTec/faq-help?style=for-the-badge&logo=github)](https://github.com/DavitTec/faq-help/tag)
+[![GitHub open issues](https://img.shields.io/github/issues-raw/DavitTec/faq-help?style=for-the-badge&label=Open%20Issues)](https://github.com/DavitTec/faq-help/issues)
+[![GitHub top language](https://img.shields.io/github/languages/top/DavitTec/faq-help?style=for-the-badge)](https://github.com/DavitTec/davit-logger-pro)
+[![GitHub license](https://img.shields.io/github/license/DavitTec/faq-help?style=for-the-badge)](https://github.com/DavitTec/davit-logger-pro)
+
+---
 
 ## Overview
 
@@ -37,7 +40,9 @@ This package is part of the Davit ecosystem and serves as a testbed for integrat
    ```bash
    node server.js
 
-   # or  pnpm dev
+   # or  
+   
+   pnpm dev   # must build first
    ```
 
    This will launch the application, potentially serving FAQ content over HTTP. (Note: Specific endpoints and configurations are under development.)
