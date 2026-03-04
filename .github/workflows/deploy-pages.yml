@@ -27,6 +27,11 @@ jobs:
       - name: Build static site
         run: pnpm build  # Replace with your actual build command (e.g., if it's 'node build.js' or similar)
 
+      - name: Move faq-help to root
+        run: |
+          rsync -a --delete public/faq-help/ public/
+          rm -r public/faq-help
+
       - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:

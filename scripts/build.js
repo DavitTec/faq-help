@@ -1,3 +1,4 @@
+require('dotenv').config();
 const nunjucks = require('nunjucks');
 const fs = require('fs');
 const path = require('path');
@@ -6,13 +7,25 @@ const matter = require('gray-matter');
 const { stringify } = require('querystring');
 const Logger = require('../lib/logger');
 const sass = require('sass');
-const basePath = process.env.BASE_PATH || '/faq-help';  // Default to '' for dev
+
+
+// Default MODE to 'prod' (for GitHub Actions/gh-pages)
+const MODE = process.env.MODE || "prod";
+
+// Set basePath based on MODE
+let basePath = '';  // Default empty for dev (local absolute paths)
+if (MODE === "prod") {
+  basePath = '/faq-help';  // Prod prefix for GitHub Pages
+}
+// For testing:
+console.log(`MODE: ${MODE}, basePath: ${basePath}`);
+
 
 const projects = JSON.parse(fs.readFileSync('config/projects.json'));
 const projectName = process.argv[2] || 'default';
 const config = projects.projects[projectName];
 const log = new Logger(projectName, process.env.MODE);  // projectName from argv
-
+log.info(`Building in MODE: ${MODE}, basePath: ${basePath}`)
 log.info('Starting build', '', 'pre-build');
 if (!config) throw new Error(`❌ Project ${projectName} not found`);
 
