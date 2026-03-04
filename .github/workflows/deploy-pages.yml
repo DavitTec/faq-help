@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '20'  # Match your project's Node version (from package.json or .nvmrc)
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4  # This installs pnpm (latest version by default; specify 'version: 8' if needed)
+
       - name: Install dependencies
         run: pnpm install  # Assuming pnpm; change to npm/yarn if needed
 
