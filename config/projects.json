@@ -1,0 +1,22 @@
+{
+  "server": "localhost",
+  "port": 5051,
+  "ssl": false,
+  "projects": {
+    "faq-help": {
+      "dataDir": "data/faq-help",
+      "njksDir": "src/njk",
+      "buildDir": "public",
+      "outputDir": "public/faq-help",
+      "slidesDir": "slides",
+      "deckFile": "deck.json",
+      "version": "0.1.0",
+      "created": "2026-03-02T00:00:00Z",
+      "rulesOverride": {
+        "maxSlides": 5
+      },
+      "author": "David Mullins",
+      "customAssets": false
+    }
+  }
+}

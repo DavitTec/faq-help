@@ -1,10 +1,14 @@
 {
   "name": "presentation-engine",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "build": "node ./scripts/build.js faq-help",
+    "dev": "nodemon server.js",
+    "live": "live-server public"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +16,7 @@
   "packageManager": "pnpm@10.13.1",
   "dependencies": {
     "express": "^5.2.1",
+    "gray-matter": "^4.0.3",
     "live-server": "^1.2.2",
     "marked": "^17.0.3",
     "nodemon": "^3.1.14",

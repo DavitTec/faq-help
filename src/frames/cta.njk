@@ -1,0 +1,19 @@
+<!-- src/frames/cta.njk -->
+<div class="slide">
+  <div class="content" style="text-align: center; max-width: 900px;">
+    <h1 class="glow">{{ title | default('Call to Action') }}</h1>
+    {% if message %}
+      <p style="font-size: 1.6rem; margin: 20px 0;">{{ message }}</p>
+    {% endif %}
+    {% if button %}
+      <a href="{{ button.link }}" class="control-btn" style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 15px 30px; border-radius: 8px; color: white; text-decoration: none;">
+        {{ button.text | default('Get Started') }}
+      </a>
+    {% endif %}
+    {% if contact %}
+      <p style="margin-top: 40px; font-size: 1.2rem;">
+        Contact: {{ contact.email }} | {{ contact.phone }}
+      </p>
+    {% endif %}
+  </div>
+</div>

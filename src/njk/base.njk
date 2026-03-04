@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{{ cssPaths }}">
+</head>
+
+<body>
+  <!-- Particle background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Progress bar -->
+  <div class="progress" id="progress"></div>
+
+  <!-- Presentation container – ALL slides must be inside -->
+  <div class="presentation-container">
+     <!-- Slide {{ loop.index0 }} -->
+    {% for slide in deck.slides %}
+    <div class="slide {% if loop.first %}active{% endif %}" id="slide{{ loop.index0 }}">
+      <div class="content">{{ slide.content | safe }}</div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="navigation" id="navigation"></div>
+  <div class="controls">
+    <button id="prevBtn" class="control-btn">←</button>
+    <button id="nextBtn" class="control-btn">→</button>
+  </div>
+  <script src="{{ jsPaths }}"></script>
+</body>
+
+</html>

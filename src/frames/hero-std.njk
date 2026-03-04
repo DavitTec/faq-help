@@ -1,0 +1,20 @@
+<!-- src/frames/hero-std.njk -->
+<div class="slide">
+  <div class="content" style="text-align: center; max-width: 1200px;">
+    <h1 class="glow">{{ title | default('Default Hero Title') }}</h1>
+    {% if subtitle %}
+      <h2 style="color: rgba(218, 25, 166, 0.623);">{{ subtitle }}</h2>
+    {% endif %}
+    {% if stats %}
+      {% for stat in stats %}
+        <span class="stat-label">{{ stat }}</span>
+      {% endfor %}
+    {% endif %}
+    {% if speaker %}
+      <p style="font-size: 1.2rem; color: rgba(218, 25, 166, 0.623); margin-top: 30px;">
+        <strong>{{ company }}｜{{ date }}</strong><br />
+        Speaker: {{ speaker }}
+      </p>
+    {% endif %}
+  </div>
+</div>

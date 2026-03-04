@@ -1,0 +1,13 @@
+<!-- src/frames/two-column.njk -->
+<div class="slide">
+  <div class="content" style="display: grid; grid-template-columns: {{ columns | default('1fr 1fr') }}; gap: 60px; align-items: {{ align | default('center') }}; max-width: 1200px;">
+    <div class="column-left">
+      {% if leftTitle %}<h2>{{ leftTitle }}</h2>{% endif %}
+      {{ leftContent | safe }}
+    </div>
+    <div class="column-right">
+      {% if rightTitle %}<h2>{{ rightTitle }}</h2>{% endif %}
+      {{ rightContent | safe }}
+    </div>
+  </div>
+</div>

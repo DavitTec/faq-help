@@ -1,0 +1,20 @@
+{
+  "deckMetadata": {
+    "version": "0.1.0",
+    "created": "2026-03-02T00:00:00Z",
+    "updated": "2026-03-02T00:00:00Z",
+    "author": "David Mullins",
+    "project": "davit1"
+  },
+  "slides": [
+    {
+      "name": "Hero Slide",
+      "type": "hero-std",
+      "file": "01-hero",
+      "version": "0.1.0",
+      "created": "2026-03-02T00:00:00Z",
+      "updated": "2026-03-02T00:00:00Z",
+      "content": "<h1 class='glow'>Fallback Content</h1>"
+    }
+  ]
+}

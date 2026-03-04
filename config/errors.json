@@ -1,0 +1,56 @@
+{
+  "GEN001": {
+    "code": "GEN001",
+    "status": "error",
+    "msg": "General validation error",
+    "action": "Check input and try again"
+  },
+  "maxSlides": {
+    "code": "VAL001",
+    "status": "error",
+    "msg": "Exceeded maximum number of slides",
+    "action": "Reduce slides or update rules.json maxSlides"
+  },
+  "maxWordsPerSlide": {
+    "code": "VAL002",
+    "status": "warn",
+    "msg": "Slide exceeds word limit",
+    "action": "Trim content in MD file"
+  },
+  "frameType.missing": {
+    "code": "VAL003",
+    "status": "warn",
+    "msg": "Missing or invalid frameType",
+    "action": "Add frameType to LEVEL1-frameTypes.json and run pnpm merge-rules"
+  },
+  "scaleTooSmall": {
+    "code": "VAL004",
+    "status": "error",
+    "msg": "Scaling factor too low – content may not fit",
+    "action": "Reduce nesting depth or content; adjust baseFont in validate.js"
+  },
+  "requiredComponentMissing": {
+    "code": "VAL005",
+    "status": "warn",
+    "msg": "Missing required component in slide",
+    "action": "Add required elements (e.g., h1) to MD content"
+  },
+  "layerIncomplete": {
+    "code": "VAL006",
+    "status": "warn",
+    "msg": "Incomplete rules layers for frameType",
+    "action": "Add missing LEVEL2/3/4 entries for this type"
+  },
+  "deckMissing": {
+    "code": "VAL007",
+    "status": "error",
+    "msg": "deck.json file not found",
+    "action": "Run pnpm init-project or create deck.json manually"
+  },
+  "projectInvalid": {
+    "code": "VAL008",
+    "status": "warn",
+    "msg": "Invalid project configuration",
+    "action": "Check projects.json for this project"
+  }
+}
