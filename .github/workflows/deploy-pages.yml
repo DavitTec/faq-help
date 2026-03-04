@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    tags:
+      - 'v*'  # Triggers on tags like v0.3.0, v1.0.0, etc. Adjust pattern if needed.
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'  # Match your project's Node version (from package.json or .nvmrc)
+
+      - name: Install dependencies
+        run: pnpm install  # Assuming pnpm; change to npm/yarn if needed
+
+      - name: Build static site
+        run: pnpm build  # Replace with your actual build command (e.g., if it's 'node build.js' or similar)
+
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: public  # Only deploys the contents of this folder
+          branch: gh-pages  # Target branch
+          clean: true  # Cleans up old files on the branch
