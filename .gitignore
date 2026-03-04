@@ -1,0 +1,29 @@
+# revised gitignignore 2026-03-04 10:45
+# DAVIT Gitignore File
+
+# VSODE
+vscode.sh
+.vscode/
+# Config Files
+.env
+.env.local
+config.yaml
+settings.json   
+requirements.yaml
+# Docs History
+docs/hist/*_hist.md 
+# Temp Files
+tmp/    
+temp
+# Test Files
+tests
+#log Files
+logs/
+# Archives
+archives
+node_modules/
+dist/
+archives/
+.env   # must add this
+.init-build/
+.bootstrap/

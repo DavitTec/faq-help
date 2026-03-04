@@ -1,0 +1,25 @@
+{
+  "name": "presentation-engine",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "express": "^5.2.1",
+    "live-server": "^1.2.2",
+    "marked": "^17.0.3",
+    "nodemon": "^3.1.14",
+    "nunjucks": "^3.2.4",
+    "sass": "^1.97.3"
+  },
+  "devDependencies": {
+    "eslint": "^10.0.2",
+    "eslint-config-standard": "^17.1.0"
+  }
+}
