@@ -6,7 +6,7 @@ const matter = require('gray-matter');
 const { stringify } = require('querystring');
 const Logger = require('../lib/logger');
 const sass = require('sass');
-
+const basePath = process.env.BASE_PATH || '/faq-help';  // Default to '' for dev
 
 const projects = JSON.parse(fs.readFileSync('config/projects.json'));
 const projectName = process.argv[2] || 'default';
@@ -117,6 +117,7 @@ if (!fs.existsSync(base)) {
   throw new Error(`❌ base.njk not found at ${base}. Check njksDir in your project config.`);
 }
 const html = nunjucks.render(base, { 
+  base_path: basePath,
   deck, 
   title: `DAVIT ${projectName}`,
   cssPaths,
