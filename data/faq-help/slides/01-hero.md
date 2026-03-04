@@ -5,7 +5,7 @@ version: 0.3.0
 created: 2026-03-02T12:00:00Z
 ---
 
-# Wecome to FAQ HELP
+# Welcome to FAQ HELP
 
 ## Your Solutions Partner
 

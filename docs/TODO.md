@@ -1,6 +1,8 @@
 # TODO for faq-help
 
-This document outlines upcoming tasks, features, and improvements for the `faq-help` package (v0.2.0). Priorities are marked as [High], [Medium], or [Low].
+This document outlines upcoming tasks, features, and improvements for the `faq-help` package (v0.3.0). 
+
+Priorities are marked as [High], [Medium], or [Low].
 
 ## Integration and Testing
 
@@ -15,7 +17,7 @@ This document outlines upcoming tasks, features, and improvements for the `faq-h
 
 - [Medium] Develop testing procedures.
   - Create unit tests for logger integration using frameworks like Jest (for Node.js) or Bats (for Bash).
-  - Set up integration tests to verify logger behavior in FAQ rendering workflows.
+  - Set up integration tests to verify logger behaviour in FAQ rendering workflows.
   - Include edge cases: high-load scenarios, error code resolution, and fail-safe defaults.
 
 ## FAQ and Content Development
@@ -47,9 +49,9 @@ This document outlines upcoming tasks, features, and improvements for the `faq-h
 - [Low] Add environment variable support.
   - Align with `davit-logger-pro` for configurable logging levels and themes.
 
-- [Low] Performance optimizations.
+- [Low] Performance optimisations.
   - Benchmark server response times for FAQ queries.
-  - Optimize data loading from `data/faq-help/`.
+  - Optimise data loading from `data/faq-help/`.
 
 ## Miscellaneous
 

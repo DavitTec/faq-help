@@ -27,3 +27,4 @@ archives/
 .env   # must add this
 .init-build/
 .bootstrap/
+public/

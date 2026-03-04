@@ -13,13 +13,32 @@
 
 This package is part of the Davit ecosystem and serves as a testbed for integrating and evaluating advanced utilities, such as the `davit-logger-pro` logging framework. It allows for experimentation with logging in production-like scenarios, testing procedures, and building FAQ slides.
 
+Also: preview https://davittec.github.io/faq-help/
+
 ## Features
 
 - Server-side FAQ content delivery via `server.js`.
 - Data storage for FAQs in structured formats (e.g., JSON in `data/faq-help/`).
 - Modular structure with libraries (`lib/`), scripts (`scripts/`), and source code (`src/`).
-- Configuration options in `config/` for customization.
+- Configuration options in `config/` for customisation.
 - Early-stage integration testing for logging utilities.
+
+#### Structure
+
+- Structure and Organisation:
+  - **config/**: For customizable settings.
+  - **data/faq-help/**: Stores FAQ data (likely JSON or similar for dynamic rendering).
+  - **docs/**: Includes files like TODO.md for planned tasks (e.g., logger integration, testing procedures, FAQ building).
+  - **lib/**: Reusable utilities (e.g., potentially replacing logger.sh with davit-logger-pro).
+  - **scripts/**: Automation tools, including build scripts for generating the static public/ folder.
+  - **src/**: Core application code, handling rendering (e.g., via Nunjucks for templates).
+  - **Root files**: `.gitignore`, [CHANGELOG.md](CHANGELOG.md) (tracks updates), [LICENSE.md](LICENSE.md) (MIT), `package.json` (defines dependencies like pnpm, scripts for build/dev), `server.js` (entry point for serving content).
+- **GitHub Setup**: Includes `.github/workflows/` with a deployment workflow (e.g., `deploy-pages.yml`) that automates building and pushing the public/ folder to gh-pages on tags.
+- **Features and Integrations**:
+  - Uses modern tools: pnpm for deps, Nunjucks for templating, SCSS/CSS for styling.
+  - Designed for static site generation (outputs to public/), with "dev"/"prod" distinctions (e.g., via MODE env and basePath for paths).
+  - Testbed for davit-logger-pro: Good for evaluating logging in production phases.
+  - Potential for multiple subdomains/projects, but focuses on "faq-help" for GitHub Pages.
 
 ## Installation
 
@@ -39,7 +58,7 @@ This package is part of the Davit ecosystem and serves as a testbed for integrat
 1. Start the server:
    ```bash
    node server.js
-
+   
    # or  
    
    pnpm dev   # must build first
