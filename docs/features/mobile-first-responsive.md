@@ -2,9 +2,42 @@
 
 OPENED Issue: https://github.com/DavitTec/faq-help/issues/2
 
+GIT Branch: feat/#2-mobile-first-responsive
+
+**INPUT**
+
+- original `styles/style.scss`
+- Current state: Basic SCSS/CSS with no or minimal media queries
+- Baseline version: v0.2.0
+- Assets: scss/main.scss, public/css/style.css, slides in data/faq-help/
+
+**PROCESS**
+
+- Decide on structured folder and SASS or SCSS (Decide?)
+- Define SCSS variables & mixins for breakpoints
+- Apply base styles for mobile-small
+- Add progressive enhancements (mobile-large → tablet → laptop → desktop)
+- Handle portrait/landscape orientations
+- Manual testing with browser dev tools (emulate iPhone SE, Galaxy, iPad, etc.)
+- Update build to compile updated SCSS
+
+**OUTPUT**
+
+- Expected version: v0.3.0 (minor feature)
+- Validations: No horizontal scroll on <768px, readable text, adaptive padding
+- Deployed site shows correct layout on mobile emulation
+
+**CHECKLOOP**
+
+- Test cases: Portrait small phone, landscape large phone, tablet rotation
+- Tools: Chrome/Firefox dev tools device mode
+- Success criteria: Lighthouse mobile score >80 (accessibility/performance)
+
 ## Description
 
 ### Feature Branch for Mobile-First Implementation
+
+- [x] Create branch
 
 To implement the "mobile-first" responsive design strategy in your `faq-help` project (https://github.com/DavitTec/faq-help), we'll create a dedicated feature branch. This keeps development isolated, allows for iterative commits, and ensures clean integration back to `main`. The strategy uses your real project as an example: starting with base mobile styles in SCSS (e.g., for small phones), then progressively enhancing for larger mobiles, tablets, laptops, and desktops via media queries and mixins, as outlined in the previous response. We'll test locally with browser dev tools emulating devices (e.g., iPhone SE for small mobile, Galaxy S20 for large mobile) and orientations.
 
