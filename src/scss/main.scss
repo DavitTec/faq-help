@@ -1,0 +1,66 @@
+// Filename: main.scss
+// Version: 1.0.0
+// Desc: Main SCSS entry point, imports all modules in correct order
+// Usage: Compiled to site_root/css/main.css via build scripts
+// Req: Sass compiler
+
+// ============================================================================
+// 1. Variables & Mixins (Before everything)
+// ============================================================================
+
+@import 'globals/variables';
+@import 'globals/mixins';
+
+// ============================================================================
+// 2. Reset & Base Styles
+// ============================================================================
+
+@import 'globals/reset';
+
+// ============================================================================
+// 3. Component Styles
+// ============================================================================
+
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
+
+// ============================================================================
+// 4. Module Styles
+// ============================================================================
+
+@import 'modules/grid';
+@import 'modules/typography';
+
+// ============================================================================
+// 5. Section Styles
+// ============================================================================
+
+@import 'sections/header';
+@import 'sections/footer';
+@import 'sections/navigation';
+
+// ============================================================================
+// 6. View/Page Specific Styles
+// ============================================================================
+
+@import 'views/home';
+@import 'views/about';
+
+// ============================================================================
+// 7. Utility Classes
+// ============================================================================
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+
+  @include respond-md {
+    padding: 0 $spacing-lg;
+  }
+}
+
+.sr-only {
+  @include visually-hidden;
+}
